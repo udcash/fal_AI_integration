@@ -98,11 +98,12 @@ class VideoAgent {
       const userMessage = document
         .getElementById("user-input-field")
         .value.trim();
+        const paddedMessage = "...     " + userMessage;
       if (!userMessage) throw new Error("Please enter a message");
 
       document.getElementById("input-container").classList.add("loading");
-      console.log("streamId:", this.streamId);
-      console.log("sessionId:", this.sessionId);
+      // console.log("streamId:", this.streamId);
+      // console.log("sessionId:", this.sessionId);
 
       const talkResponse = await fetch(
         `${this.DID_API_URL}/talks/streams/${this.streamId}`,
@@ -115,9 +116,9 @@ class VideoAgent {
           body: JSON.stringify({
             script: {
               type: "text",
-              input: userMessage, // Direct user input here
+              input: paddedMessage, // Direct user input here
               provider: {
-                type: "microsoft",
+                type: "elevenlabs",
                 voice_id: this.API_CONFIG.voice_id,
               },
             },
@@ -266,7 +267,7 @@ class VideoAgent {
           type: "text",
           input: aiResponse,
           provider: {
-            type: "microsoft",
+            type: "elevenlabs",
             voice_id: this.API_CONFIG.voice_id,
           },
         },
