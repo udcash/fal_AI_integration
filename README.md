@@ -1,8 +1,4 @@
-# Streaming Live Demo by D-ID (tested 4/5/25)
-## Please consider leaving a star :)
-
-https://youtu.be/VhSG-KOyQow
-![image](https://github.com/user-attachments/assets/ad8770be-aee8-435e-a0bf-c34839e07604)
+# Streaming Live Demo by D-ID (tested 23/7/25)
 
 ## Initial Setup:
 * (install express) open a terminal in the folder:
@@ -10,7 +6,7 @@ https://youtu.be/VhSG-KOyQow
     **run this: npm install openai
     **run this: npm install base64
 * (add your d-id api key and openai key etc) edit the `api.json` file
-* ![image](https://github.com/user-attachments/assets/7f35b777-e502-462c-9295-88e9a58d488a)
+  
 
 * Run a test to ensure yor D-id api key is set correctly by checking d-id credit balance:  node test_d_id.js
 * Run a test to ensure yor Openai api key is set correctly by checking ChatGPT:  node test_openai.js
