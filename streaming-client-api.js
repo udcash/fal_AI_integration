@@ -98,7 +98,7 @@ class VideoAgent {
       const userMessage = document
         .getElementById("user-input-field")
         .value.trim();
-        const paddedMessage = "...     " + userMessage;
+        const paddedMessage = "." + userMessage;
       if (!userMessage) throw new Error("Please enter a message");
 
       document.getElementById("input-container").classList.add("loading");
@@ -166,7 +166,7 @@ class VideoAgent {
       },
       body: JSON.stringify({
         source_url:
-          "https://raw.githubusercontent.com/jjmlovesgit/D-id_Streaming_Chatgpt/main/oracle_pic.jpg",
+          "https://raw.githubusercontent.com/udcash/fal_AI_integration/main/oracle_pic.jpg",
         stream_warmup: true,
         config: {
           video_quality: "hd",
